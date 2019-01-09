@@ -204,7 +204,7 @@ public class OPSCheckerTest
   public void testValidateXHTMLOPSMATHML001()
   {
     testValidateDocument("xhtml/valid/ops-mathml-001.xhtml", "application/xhtml+xml",
-        EPUBVersion.VERSION_3);
+        EPUBVersion.VERSION_3, true);
   }
 
   @Test

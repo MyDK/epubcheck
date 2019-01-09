@@ -50,10 +50,10 @@
          | (attribute encoding { "application/mathml-presentation+xml" | "MathML-Presentation" },
          (src | MathExpression+))
          | (attribute encoding { "application/xhtml+xml" },
-         parent html5.flow.model)
+         parent common.inner.flow)
                        
          # add xml:base
-         CommonAtt &= parent html5.xml.base.attr?
+         CommonAtt &= parent common.attrs.xmlbase?
 
    include "mathml/mathml3-presentation.rnc" {
       # redefine to refer to datatype proxy

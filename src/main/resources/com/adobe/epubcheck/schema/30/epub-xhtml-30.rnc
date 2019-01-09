@@ -21,7 +21,15 @@ include "./mod/html5.nu/common.rnc" {
 
 start = html.elem
 
+## Static datatypes
+
+# Note: these are too simplistic. The Nu HTML Checker performs
+# a significant part of the checking in its Java-based datatype
+# library.
+
 include "./mod/datatypes.rnc"
+
+## Modules from the Nu HTML Checker
    
 include "./mod/html5.nu/meta.rnc"
 include "./mod/html5.nu/phrase.rnc"
@@ -43,6 +51,8 @@ include "./mod/html5.nu/aria.rnc"
 include "./mod/html5.nu/microdata.rnc"
 include "./mod/html5.nu/web-components.rnc"
 
+## EPUB additions
+
 include "./mod/epub-trigger.rnc"
 include "./mod/epub-switch.rnc"
    
@@ -50,36 +60,7 @@ include "./mod/epub-type-attr.rnc"
 include "./mod/epub-prefix-attr.rnc"      
 include "./mod/epub-ssml-attrs.rnc"
 
+## SVG and MathML
 
-
-   #default namespace = "http://www.w3.org/1999/xhtml"
-   
-   #include "./mod/html5/html5-document-30.rnc"
-      
-   #include "./mod/html5/html5-sections-30.rnc"
-   #include "./mod/html5/html5-grouping-30.rnc"
-   #include "./mod/html5/html5-phrasing-30.rnc"   
-   #include "./mod/html5/html5-embed-30.rnc"
-      
-   #include "./mod/html5/html5-edit-30.rnc"
-   #include "./mod/html5/html5-style-30.rnc"
-   #include "./mod/html5/html5-script-30.rnc"
-   #include "./mod/html5/html5-interactive-30.rnc"
-   #include "./mod/html5/html5-forms-30.rnc"
-      
-   #include "./mod/html5/html5-attrib-30.rnc"
-   #include "./mod/html5/html5-aria-30.rnc"
-   #include "./mod/html5/html5-rdfa.rnc"
-   #include "./mod/html5/html5-md.rnc"
-           
-   #include "./mod/datatypes.rnc"
-   #include "./mod/html5/html5-models-30.rnc"
-   
-   #include "./mod/epub-xhtml-mathml3-30.rnc"
-   #include "./mod/epub-xhtml-svg11-30.rnc"
-   
-   
-   
-   #start = html5.html
-      
-   
+include "./mod/epub-xhtml-mathml3-30.rnc"
+# include "./mod/epub-xhtml-svg11-30.rnc"
