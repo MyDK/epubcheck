@@ -88,7 +88,7 @@ grammar {
         SVG.GraphicalEvents.attrib,
         SVG.Cursor.attrib,
         SVG.External.attrib,
-        (parent common.attrs.aria.implicit.group | parent common.attrs.aria)?,
+        (common.attrs.aria.implicit.group | common.attrs.aria)?,
         attribute x { Coordinates.datatype }?,
         attribute y { Coordinates.datatype }?,
         attribute rotate { Numbers.datatype }?,
@@ -117,7 +117,7 @@ grammar {
         SVG.Cursor.attrib,
         SVG.XLink.attrib,
         SVG.External.attrib,
-        (parent common.attrs.aria.implicit.group | parent common.attrs.aria)?,
+        (common.attrs.aria.implicit.group | common.attrs.aria)?,
         attribute glyphRef { text }?,
         attribute format { text }?
     a:documentation [
@@ -144,7 +144,7 @@ grammar {
         SVG.Style.attrib,
         SVG.Font.attrib,
         SVG.XLink.attrib,
-        (parent common.attrs.aria.implicit.group | parent common.attrs.aria)?,
+        (common.attrs.aria.implicit.group | common.attrs.aria)?,
         attribute glyphRef { text }?,
         attribute format { text }?
 }

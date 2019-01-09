@@ -38,6 +38,4 @@ grammar {
         SVG.tabindex.attrib,
         SVG.focusable.attrib,
         SVG.Core.extra.attrib
-    common.attrs.aria = parent common.attrs.aria
-    # common.attrs.aria.implicit.group = parent common.attrs.aria.implicit.group
 }

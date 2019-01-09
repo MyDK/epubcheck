@@ -63,7 +63,7 @@ grammar {
         SVG.GraphicalEvents.attrib,
         SVG.XLinkReplace.attrib,
         SVG.External.attrib,
-        (parent common.attrs.aria.implicit.link | parent common.attrs.aria)?,
+        (common.attrs.aria.implicit.link | common.attrs.aria)?,
         attribute transform { TransformList.datatype }?,
         attribute target { LinkTarget.datatype }?
 }

@@ -11,7 +11,7 @@
 
 include "mathml3-strict-content.rnc"{
   cn.content = (text | mglyph | sep | PresentationExpression)* 
-  cn.attributes = CommonAtt, DefEncAtt, attribute type {text}?, base?
+  cn.attributes = CommonAtt, DefEncAtt, attribute type {text}?, math-base?
 
   ci.attributes = CommonAtt, DefEncAtt, ci.type?
   ci.type = attribute type {text}
@@ -31,7 +31,7 @@ include "mathml3-strict-content.rnc"{
   bind.content = apply.content
 }
 
-base = attribute base {text}
+math-base = attribute base {text}
 
 
 sep = element sep {empty}
@@ -83,7 +83,7 @@ ContExp |= interval.class
 
 interval = element interval { CommonAtt, DefEncAtt,closure?, ContExp,ContExp}
 
-unary-functional.class = inverse | ident | domain | codomain | image | ln | log | moment
+unary-functional.class = inverse | ident | domain | codomain | math-image | ln | log | moment
 ContExp |= unary-functional.class
 
 
@@ -91,7 +91,7 @@ inverse = element inverse { CommonAtt, DefEncAtt, empty}
 ident = element ident { CommonAtt, DefEncAtt, empty}
 domain = element domain { CommonAtt, DefEncAtt, empty}
 codomain = element codomain { CommonAtt, DefEncAtt, empty}
-image = element image { CommonAtt, DefEncAtt, empty}
+math-image = element image { CommonAtt, DefEncAtt, empty}
 ln = element ln { CommonAtt, DefEncAtt, empty}
 log = element log { CommonAtt, DefEncAtt, empty}
 moment = element moment { CommonAtt, DefEncAtt, empty}
@@ -223,11 +223,11 @@ grad = element grad { CommonAtt, DefEncAtt, empty}
 curl = element curl { CommonAtt, DefEncAtt, empty}
 laplacian = element laplacian { CommonAtt, DefEncAtt, empty}
 
-nary-setlist-constructor.class = set | \list
+nary-setlist-constructor.class = math-set | \list
 ContExp |= nary-setlist-constructor.class
 
 
-set = element set { CommonAtt, DefEncAtt, type?, BvarQ*, DomainQ*, ContExp*}
+math-set = element set { CommonAtt, DefEncAtt, type?, BvarQ*, DomainQ*, ContExp*}
 \list = element \list { CommonAtt, DefEncAtt, order?, BvarQ*, DomainQ*, ContExp*}
 
 nary-set.class = union | intersect | cartesianproduct

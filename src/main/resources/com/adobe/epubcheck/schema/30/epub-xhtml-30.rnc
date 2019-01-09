@@ -67,4 +67,4 @@ include "./mod/epub-ssml-attrs.rnc"
 ## SVG and MathML
 
 include "./mod/epub-xhtml-mathml3-30.rnc"
-# include "./mod/epub-xhtml-svg11-30.rnc"
+include "./mod/epub-xhtml-svg11-30.rnc"
