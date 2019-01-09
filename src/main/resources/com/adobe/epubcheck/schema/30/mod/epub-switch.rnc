@@ -14,7 +14,7 @@
    
    epub.case.flow.content = epub.switch.any 
    epub.case.phrasing.content = epub.switch.any
-   epub.switch.any = (anyElement | text)*
+   epub.switch.any = (epub.switch.anyElement | text)*
    
    epub.default.flow.content = common.inner.flow
    epub.default.phrasing.content = common.inner.phrasing
@@ -25,8 +25,8 @@
    
    epub.case.rn.attr = attribute required-namespace { datatype.URI }
  
-   anyElement = element * {
+   epub.switch.anyElement = element * {
       (attribute * { text }
       | text
-      | anyElement)*
+      | epub.switch.anyElement)*
    }   

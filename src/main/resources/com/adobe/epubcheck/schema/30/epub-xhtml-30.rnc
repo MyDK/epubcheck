@@ -51,11 +51,15 @@ include "./mod/html5.nu/aria.rnc"
 include "./mod/html5.nu/microdata.rnc"
 include "./mod/html5.nu/web-components.rnc"
 
+# TODO ## RDFa
+
 ## EPUB additions
 
+# Elements
 include "./mod/epub-trigger.rnc"
 include "./mod/epub-switch.rnc"
-   
+
+# Attributes
 include "./mod/epub-type-attr.rnc"         
 include "./mod/epub-prefix-attr.rnc"      
 include "./mod/epub-ssml-attrs.rnc"
