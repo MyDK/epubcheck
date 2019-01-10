@@ -32,8 +32,9 @@ include "./datatypes.rnc"
 ## Modules from the Nu HTML Checker
    
 include "./html5/meta.rnc" {
-  # make the title element optional, since its defined by a "higher-level protocol"
-  # (in the EPUB Package Document)
+  # make the title element optional, since one could see the publication title
+  # as defining a proper "higher-level protocol"
+  # the lack of `title` will however raise a WARNING in a Schematron rule 
 	head.inner =
 		(	title.elem? 
 		&	base.elem? # REVISIT need a non-schema checker or Schematron
