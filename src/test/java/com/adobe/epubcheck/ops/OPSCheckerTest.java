@@ -954,5 +954,13 @@ public class OPSCheckerTest
     testValidateDocument("xhtml/invalid/obsolete-pubdate.xhtml", "application/xhtml+xml",
         EPUBVersion.VERSION_3);
   }
+  
+  @Test
+  public void testObsoleteSeamessIframe()
+  {
+    Collections.addAll(expectedErrors, MessageId.RSC_005);
+    testValidateDocument("xhtml/invalid/obsolete-seamless-iframe.xhtml", "application/xhtml+xml",
+        EPUBVersion.VERSION_3);
+  }
 
 }
