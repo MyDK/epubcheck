@@ -193,7 +193,7 @@ public class OPSCheckerTest
   public void testValidateXHTMLGlobalAttrs001()
   {
     testValidateDocument("xhtml/valid/global-attrs-001.xhtml", "application/xhtml+xml",
-        EPUBVersion.VERSION_3, false);
+        EPUBVersion.VERSION_3);
   }
 
   @Test
@@ -944,6 +944,14 @@ public class OPSCheckerTest
   public void testValidateEmptyLangAttribute_EPUB3_Valid()
   {
     testValidateDocument("xhtml/valid/issue777-empty-lang.xhtml", "application/xhtml+xml",
+        EPUBVersion.VERSION_3);
+  }
+  
+  @Test
+  public void testObsoleteDropzoneAttribute()
+  {
+    Collections.addAll(expectedErrors, MessageId.RSC_005);
+    testValidateDocument("xhtml/invalid/obsolete-dropzone.xhtml", "application/xhtml+xml",
         EPUBVersion.VERSION_3);
   }
   
