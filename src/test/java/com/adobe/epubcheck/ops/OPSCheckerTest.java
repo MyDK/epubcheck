@@ -186,7 +186,7 @@ public class OPSCheckerTest
   public void testValidateXHTMLForms001()
   {
     testValidateDocument("xhtml/valid/forms-001.xhtml", "application/xhtml+xml",
-        EPUBVersion.VERSION_3, true);
+        EPUBVersion.VERSION_3);
   }
 
   @Test
@@ -952,6 +952,14 @@ public class OPSCheckerTest
   {
     Collections.addAll(expectedErrors, MessageId.RSC_005);
     testValidateDocument("xhtml/invalid/obsolete-keygen.xhtml", "application/xhtml+xml",
+        EPUBVersion.VERSION_3);
+  }
+  
+  @Test
+  public void testObsoleteMenus()
+  {
+    Collections.addAll(expectedErrors, MessageId.RSC_005, MessageId.RSC_005, MessageId.RSC_005);
+    testValidateDocument("xhtml/invalid/obsolete-menus.xhtml", "application/xhtml+xml",
         EPUBVersion.VERSION_3);
   }
   

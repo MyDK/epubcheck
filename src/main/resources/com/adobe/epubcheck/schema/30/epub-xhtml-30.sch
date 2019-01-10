@@ -403,7 +403,7 @@
     <pattern abstract="true" id="no-interactive-content-descendants">
         <rule
             context="h:a|h:audio[@controls]|h:button|h:details|h:embed|h:iframe|h:img[@usemap]|h:input[not(@type='hidden')]
-            |h:label|h:menu[@type='toolbar']|h:object[@usemap]|h:select|h:textarea|h:video[@controls]">
+            |h:label|h:menu|h:object[@usemap]|h:select|h:textarea|h:video[@controls]">
             <report test="ancestor::$ancestor">The <name/> element must not appear inside <value-of
                     select="local-name(ancestor::$ancestor)"/> elements.</report>
         </rule>
