@@ -3,7 +3,7 @@
 namespace svg = "http://www.w3.org/2000/svg"
 
 include "svg11/svg11-inc.rnc" {
-  SVG.id.attrib = attribute id { datatype.ID }?
+  SVG.id.attrib = attribute id { datatype.html5.token }?
 }
 include "svg11/inkscape.rnc"
 

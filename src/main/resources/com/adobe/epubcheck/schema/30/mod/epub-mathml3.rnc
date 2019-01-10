@@ -16,7 +16,7 @@
         
       # redefine to refer to datatype proxy and remove deprecated attributes
       CommonAtt =
-         attribute id { datatype.ID }?,
+         attribute id { datatype.html5.token }?,
          attribute xref { datatype.IDREF }?,
          attribute class { datatype.NMTOKENS }?,
          attribute style { datatype.string }?,

@@ -224,7 +224,7 @@ common.attrs.other =
 ## IDs and IDREFs
 
 	common.data.id =
-		datatype.ID
+		datatype.html5.token
 #		xsd:string {
 #			pattern = "\S+"
 #		}
