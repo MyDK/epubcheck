@@ -260,7 +260,7 @@ public class OPSCheckerTest
   {
     // assure that epub:type is allowed on svg elements
     testValidateDocument("xhtml/valid/ops-svg-002.xhtml", "application/xhtml+xml",
-        EPUBVersion.VERSION_3, false);
+        EPUBVersion.VERSION_3);
   }
 
   @Test
@@ -944,6 +944,14 @@ public class OPSCheckerTest
   public void testValidateEmptyLangAttribute_EPUB3_Valid()
   {
     testValidateDocument("xhtml/valid/issue777-empty-lang.xhtml", "application/xhtml+xml",
+        EPUBVersion.VERSION_3);
+  }
+  
+  @Test
+  public void testObsoleteContextMenuAttribute()
+  {
+    Collections.addAll(expectedErrors, MessageId.RSC_005);
+    testValidateDocument("xhtml/invalid/obsolete-contextmenu.xhtml", "application/xhtml+xml",
         EPUBVersion.VERSION_3);
   }
   

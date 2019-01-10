@@ -191,12 +191,6 @@
         <param name="idref-attr-name" value="indenttarget"/>
     </pattern>
 
-    <pattern id="idref-contextmenu" is-a="idref-named">
-        <param name="element" value="h:*"/>
-        <param name="idref-attr-name" value="contextmenu"/>
-        <param name="target-name" value="h:menu"/>
-    </pattern>
-
     <pattern id="idref-input-list" is-a="idref-named">
         <param name="element" value="h:input"/>
         <param name="idref-attr-name" value="list"/>
