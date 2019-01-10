@@ -1,0 +1,64 @@
+# Credit: integration adapted from the Nu Html Checker drivers
+
+default namespace = "http://www.w3.org/1999/xhtml"
+# #####################################################################
+##  RELAX NG Schema for XHTML 5                                       #
+# #####################################################################
+
+# #####################################################################
+## Schema Framework & Parameters
+
+include "./html5.nu/common.rnc" {
+	# XHTML flavor #
+		XMLonly = empty
+		HTMLonly = notAllowed
+	# HTML 4 compat #
+		v5only = empty
+}
+
+# #####################################################################
+## Language Definitions
+
+start = html.elem
+
+## Static datatypes
+
+# Note: these are too simplistic. The Nu HTML Checker performs
+# a significant part of the checking in its Java-based datatype
+# library.
+
+include "./datatypes.rnc"
+
+## Modules from the Nu HTML Checker
+   
+include "./html5.nu/meta.rnc"
+include "./html5.nu/phrase.rnc"
+include "./html5.nu/block.rnc"
+include "./html5.nu/sectional.rnc"
+include "./html5.nu/structural.rnc"
+include "./html5.nu/revision.rnc"
+include "./html5.nu/embed.rnc"
+include "./html5.nu/ruby.rnc"
+include "./html5.nu/media.rnc"
+include "./html5.nu/core-scripting.rnc"
+include "./html5.nu/tables.rnc"
+include "./html5.nu/form-datatypes.rnc"
+include "./html5.nu/web-forms.rnc"
+include "./html5.nu/web-forms2.rnc"
+include "./html5.nu/applications.rnc"
+include "./html5.nu/data.rnc"
+include "./html5.nu/aria.rnc"
+include "./html5.nu/microdata.rnc"
+include "./html5.nu/web-components.rnc"
+include "./html5.nu/rdfa.rnc"
+
+## EPUB additions
+
+# Elements
+include "./epub-trigger.rnc"
+include "./epub-switch.rnc"
+
+# Attributes
+include "./epub-type-attr.rnc"         
+include "./epub-prefix-attr.rnc"      
+include "./epub-ssml-attrs.rnc"

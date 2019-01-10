@@ -113,11 +113,14 @@ public class OPSCheckerTest
     }
     else
     {
-      try {
+      try
+      {
         URL fileURL = this.getClass().getResource(basepath + fileName);
-        String filePath = fileURL != null ? new File(fileURL.toURI()).getAbsolutePath() : basepath + fileName;
+        String filePath = fileURL != null ? new File(fileURL.toURI()).getAbsolutePath()
+            : basepath + fileName;
         resourceProvider = new FileResourceProvider(filePath);
-      } catch (URISyntaxException e) {
+      } catch (URISyntaxException e)
+      {
         throw new IllegalStateException("Cannot find test file", e);
       }
     }
@@ -204,7 +207,7 @@ public class OPSCheckerTest
   public void testValidateXHTMLOPSMATHML001()
   {
     testValidateDocument("xhtml/valid/ops-mathml-001.xhtml", "application/xhtml+xml",
-        EPUBVersion.VERSION_3, true);
+        EPUBVersion.VERSION_3);
   }
 
   @Test
@@ -933,8 +936,8 @@ public class OPSCheckerTest
   @Test
   public void testValidateXHTMLEmptyClass_EPUB2_Valid()
   {
-    testValidateDocument("xhtml/valid/empty-class-attribute-is-valid_issue733.xhtml", "application/xhtml+xml",
-        EPUBVersion.VERSION_2);
+    testValidateDocument("xhtml/valid/empty-class-attribute-is-valid_issue733.xhtml",
+        "application/xhtml+xml", EPUBVersion.VERSION_2);
   }
 
   @Test

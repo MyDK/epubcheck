@@ -309,11 +309,6 @@
            uri="mod/security/xmlsec-ghc-schema.rnc"/>
    <system systemId="xmlsec-ghc-schema.rnc" uri="mod/security/xmlsec-ghc-schema.rnc"/>
                         
-   <system systemId="http://www.idpf.org/epub/30/schema/mod/svg11/svg11-flat.rnc"
-           uri="mod/svg11/svg11-flat.rnc"/>
-   <system systemId="svg11/svg11-flat.rnc" uri="mod/svg11/svg11-flat.rnc"/>
-   <system systemId="svg11-flat.rnc" uri="mod/svg11/svg11-flat.rnc"/>
-                        
    <system systemId="http://www.idpf.org/epub/30/schema/ocf-container-30.rnc"
            uri="ocf-container-30.rnc"/>
                         
