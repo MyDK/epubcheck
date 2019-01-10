@@ -113,6 +113,14 @@ public class NavCheckerTest
   {
     testValidateDocument("valid/minimal.xhtml");
   }
+  
+  @Test
+  public void testValidateDocumentNavWithoutType()
+  {
+    // Warn about the presence of a `nav` with no `epub:type`
+    Collections.addAll(expectedWarnings, MessageId.RSC_017);
+    testValidateDocument("invalid/nav-no-type.xhtml");
+  }
 
   @Test
   public void testValidateDocumentValidNav001()
