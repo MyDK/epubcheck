@@ -387,8 +387,7 @@ public class OPSCheckerTest
   @Test
   public void testValidateXHTML_OPSMATHML001()
   {
-    Collections.addAll(expectedErrors, MessageId.RSC_005, MessageId.RSC_005, MessageId.RSC_005,
-        MessageId.RSC_005);
+    Collections.addAll(expectedErrors, MessageId.RSC_005, MessageId.RSC_005);
     testValidateDocument("xhtml/invalid/ops-mathml-001.xhtml", "application/xhtml+xml",
         EPUBVersion.VERSION_3);
   }
@@ -434,7 +433,7 @@ public class OPSCheckerTest
         MessageId.RSC_005, MessageId.RSC_005, MessageId.RSC_005, MessageId.RSC_005,
         MessageId.RSC_005, MessageId.RSC_005, MessageId.RSC_005, MessageId.RSC_005,
         MessageId.RSC_005, MessageId.RSC_005, MessageId.RSC_005, MessageId.RSC_005,
-        MessageId.RSC_005, MessageId.RSC_005, MessageId.RSC_005, MessageId.RSC_005);
+        MessageId.RSC_005);
 
     testValidateDocument("xhtml/invalid/sch-001.xhtml", "application/xhtml+xml",
         EPUBVersion.VERSION_3, false, new ExtraReportTest()
@@ -1001,6 +1000,14 @@ public class OPSCheckerTest
   {
     Collections.addAll(expectedErrors, MessageId.RSC_005);
     testValidateDocument("xhtml/invalid/obsolete-seamless-iframe.xhtml", "application/xhtml+xml",
+        EPUBVersion.VERSION_3);
+  }
+  
+  @Test
+  public void testContentModel_TimeInTime()
+  {
+    Collections.addAll(expectedErrors, MessageId.RSC_005);
+    testValidateDocument("xhtml/invalid/time-in-time.xhtml", "application/xhtml+xml",
         EPUBVersion.VERSION_3);
   }
 

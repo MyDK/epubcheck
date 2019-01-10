@@ -100,11 +100,6 @@
         <param name="descendant" value="h:dfn"/>
     </pattern>
 
-    <pattern id="descendant-time-time" is-a="disallowed-descendants">
-        <param name="ancestor" value="h:time"/>
-        <param name="descendant" value="h:time"/>
-    </pattern>
-
     <pattern id="descendant-caption-table" is-a="disallowed-descendants">
         <param name="ancestor" value="h:caption"/>
         <param name="descendant" value="h:table"/>
