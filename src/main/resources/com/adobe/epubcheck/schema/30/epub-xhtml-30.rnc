@@ -50,8 +50,7 @@ include "./mod/html5.nu/data.rnc"
 include "./mod/html5.nu/aria.rnc"
 include "./mod/html5.nu/microdata.rnc"
 include "./mod/html5.nu/web-components.rnc"
-
-# TODO ## RDFa
+include "./mod/html5.nu/rdfa.rnc"
 
 ## EPUB additions
 
