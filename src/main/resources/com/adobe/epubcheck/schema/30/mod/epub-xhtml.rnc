@@ -8,7 +8,7 @@ default namespace = "http://www.w3.org/1999/xhtml"
 # #####################################################################
 ## Schema Framework & Parameters
 
-include "./html5.nu/common.rnc" {
+include "./html5/common.rnc" {
 	# XHTML flavor #
 		XMLonly = empty
 		HTMLonly = notAllowed
@@ -31,26 +31,26 @@ include "./datatypes.rnc"
 
 ## Modules from the Nu HTML Checker
    
-include "./html5.nu/meta.rnc"
-include "./html5.nu/phrase.rnc"
-include "./html5.nu/block.rnc"
-include "./html5.nu/sectional.rnc"
-include "./html5.nu/structural.rnc"
-include "./html5.nu/revision.rnc"
-include "./html5.nu/embed.rnc"
-include "./html5.nu/ruby.rnc"
-include "./html5.nu/media.rnc"
-include "./html5.nu/core-scripting.rnc"
-include "./html5.nu/tables.rnc"
-include "./html5.nu/form-datatypes.rnc"
-include "./html5.nu/web-forms.rnc"
-include "./html5.nu/web-forms2.rnc"
-include "./html5.nu/applications.rnc"
-include "./html5.nu/data.rnc"
-include "./html5.nu/aria.rnc"
-include "./html5.nu/microdata.rnc"
-include "./html5.nu/web-components.rnc"
-include "./html5.nu/rdfa.rnc"
+include "./html5/meta.rnc"
+include "./html5/phrase.rnc"
+include "./html5/block.rnc"
+include "./html5/sectional.rnc"
+include "./html5/structural.rnc"
+include "./html5/revision.rnc"
+include "./html5/embed.rnc"
+include "./html5/ruby.rnc"
+include "./html5/media.rnc"
+include "./html5/core-scripting.rnc"
+include "./html5/tables.rnc"
+include "./html5/form-datatypes.rnc"
+include "./html5/web-forms.rnc"
+include "./html5/web-forms2.rnc"
+include "./html5/applications.rnc"
+include "./html5/data.rnc"
+include "./html5/aria.rnc"
+include "./html5/microdata.rnc"
+include "./html5/web-components.rnc"
+include "./html5/rdfa.rnc"
 
 ## EPUB additions
 

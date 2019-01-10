@@ -3,5 +3,5 @@ include "./mod/epub-xhtml.rnc"
 
 ## SVG and MathML
 
-include "./mod/epub-xhtml-mathml3-30.rnc"
-include "./mod/epub-xhtml-svg11-30.rnc"
+include "./mod/epub-xhtml-mathml3.rnc"
+include "./mod/epub-xhtml-svg11.rnc"

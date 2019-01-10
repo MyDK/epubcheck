@@ -10,7 +10,7 @@ include "epub-xhtml.rnc" {
 include "svg11/svg11-inc.rnc"
 include "svg11/inkscape.rnc"
 
-include "epub-mathml3-30.rnc"
+include "epub-mathml3.rnc"
 
 common.elem.phrasing |= svg
 
