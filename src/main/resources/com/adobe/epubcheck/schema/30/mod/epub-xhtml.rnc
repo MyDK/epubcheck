@@ -31,7 +31,15 @@ include "./datatypes.rnc"
 
 ## Modules from the Nu HTML Checker
    
-include "./html5/meta.rnc"
+include "./html5/meta.rnc" {
+  # make the title element optional, since its defined by a "higher-level protocol"
+  # (in the EPUB Package Document)
+	head.inner =
+		(	title.elem? 
+		&	base.elem? # REVISIT need a non-schema checker or Schematron
+		&	common.inner.metadata # Limit encoding decl position in Schematron
+		)
+}
 include "./html5/phrase.rnc"
 include "./html5/block.rnc"
 include "./html5/sectional.rnc"
