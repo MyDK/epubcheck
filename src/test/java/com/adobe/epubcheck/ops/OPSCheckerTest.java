@@ -319,6 +319,15 @@ public class OPSCheckerTest
     testValidateDocument("xhtml/invalid/style-001.xhtml", "application/xhtml+xml",
         EPUBVersion.VERSION_3);
   }
+  
+  @Test
+  public void testValidateXHTMLStyleInBody()
+  {
+    // one error for the style element, one for the scoped attribute
+    Collections.addAll(expectedErrors, MessageId.RSC_005, MessageId.RSC_005);
+    testValidateDocument("xhtml/invalid/style-in-body.xhtml", "application/xhtml+xml",
+        EPUBVersion.VERSION_3);
+  }
 
   @Test
   public void testValidateXHTMLSwitch001()

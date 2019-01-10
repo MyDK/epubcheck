@@ -299,18 +299,6 @@
         </rule>
     </pattern>
 
-    <pattern id="style-scoped">
-        <rule context="h:style[ancestor::h:body]">
-            <!-- Note: this sch test is at risk as it is fragile and doesnt fully cover the 
-            	rules of http://dev.w3.org/html5/spec/single-page.html#attr-style-scoped. 
-            	See also https://www.w3.org/Bugs/Public/show_bug.cgi?id=13102 -->
-            <assert
-                test="every $elem in preceding-sibling::* satisfies (local-name($elem) eq 'style') or (local-name($elem) eq 'figcaption') "
-                >The scoped style element must occur before any other flow content other than other
-                style elements and inter-element whitespace.</assert>
-        </rule>
-    </pattern>
-
     <pattern id="link-sizes">
         <rule context="h:link[@sizes]">
             <assert test="@rel='icon'">The sizes attribute must not be specified on link elements
