@@ -2,21 +2,16 @@
 
 namespace svg = "http://www.w3.org/2000/svg"
 
-include "svg11/svg11-inc.rnc"
+include "svg11/svg11-inc.rnc" {
+  SVG.id.attrib = attribute id { datatype.ID }?
+}
 include "svg11/inkscape.rnc"
 
 common.elem.phrasing |= svg
 
-SVG.id.attrib = attribute id { datatype.ID }?
-
 SVG.Core.extra.attrib &= epub.type.attr?
 
-SVG.foreignObject.content |=
-    (	math
-    |	html.elem
-    |	body.elem
-    |	common.inner.flow
-    )
+SVG.foreignObject.content |= common.inner.flow
     
 SVG.desc.content |= common.inner.flow
 SVG.title.content |= common.inner.flow

@@ -679,13 +679,28 @@ public class OPSCheckerTest
   }
 
   @Test
-  public void testValidateXHTMLIssue222_223_30()
+  public void testValidateXHTMLSVGForeignObject()
   {
+    // foreignObject allowed outside switch, and <body> allowed inside
+    testValidateDocument("xhtml/valid/svg-foreignobject.xhtml", "application/xhtml+xml",
+        EPUBVersion.VERSION_3);
+  }
+
+  @Test
+  public void testValidateXHTMLSVGForeignObjectBody()
+  {
+    // foreignObject with disallowed flow content
     Collections.addAll(expectedErrors, MessageId.RSC_005);
-    // in 3.0 foreignObject content must be flow as per
-    // http://idpf.org/epub/30/spec/epub30-contentdocs.html#confreq-svg-foreignObject
-    // so the document gives 1 error
-    testValidateDocument("svg/valid/issue222.xhtml", "application/xhtml+xml",
+    testValidateDocument("xhtml/invalid/svg-foreignobject-body.xhtml", "application/xhtml+xml",
+        EPUBVersion.VERSION_3);
+  }
+
+  @Test
+  public void testValidateXHTMLSVGForeignObjectNotFlow()
+  {
+    // foreignObject with disallowed flow content
+    Collections.addAll(expectedErrors, MessageId.RSC_005);
+    testValidateDocument("xhtml/invalid/svg-foreignobject-not-flow.xhtml", "application/xhtml+xml",
         EPUBVersion.VERSION_3);
   }
 
