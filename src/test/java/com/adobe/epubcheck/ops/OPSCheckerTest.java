@@ -186,7 +186,7 @@ public class OPSCheckerTest
   public void testValidateXHTMLForms001()
   {
     testValidateDocument("xhtml/valid/forms-001.xhtml", "application/xhtml+xml",
-        EPUBVersion.VERSION_3);
+        EPUBVersion.VERSION_3, true);
   }
 
   @Test
@@ -944,6 +944,14 @@ public class OPSCheckerTest
   public void testValidateEmptyLangAttribute_EPUB3_Valid()
   {
     testValidateDocument("xhtml/valid/issue777-empty-lang.xhtml", "application/xhtml+xml",
+        EPUBVersion.VERSION_3);
+  }
+  
+  @Test
+  public void testObsoleteKeygenElement()
+  {
+    Collections.addAll(expectedErrors, MessageId.RSC_005);
+    testValidateDocument("xhtml/invalid/obsolete-keygen.xhtml", "application/xhtml+xml",
         EPUBVersion.VERSION_3);
   }
   

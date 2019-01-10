@@ -222,14 +222,13 @@
                 test="some $elem in $id-set satisfies $elem/@id eq current()/@for and 
                    (local-name($elem) eq 'button' 
                  or (local-name($elem) eq 'input' and not($elem/@type='hidden'))
-                 or local-name($elem) eq 'keygen' 
                  or local-name($elem) eq 'meter'
                  or local-name($elem) eq 'output' 
                  or local-name($elem) eq 'progress' 
                  or local-name($elem) eq 'select' 
                  or local-name($elem) eq 'textarea')"
                 >The for attribute does not refer to an allowed target element (expecting:
-                button|keygen|meter|output|progress|select|textarea|input[not(@type='hidden')]).</assert>
+                button|meter|output|progress|select|textarea|input[not(@type='hidden')]).</assert>
         </rule>
     </pattern>
 
@@ -404,7 +403,7 @@
     <pattern abstract="true" id="no-interactive-content-descendants">
         <rule
             context="h:a|h:audio[@controls]|h:button|h:details|h:embed|h:iframe|h:img[@usemap]|h:input[not(@type='hidden')]
-            |h:keygen|h:label|h:menu[@type='toolbar']|h:object[@usemap]|h:select|h:textarea|h:video[@controls]">
+            |h:label|h:menu[@type='toolbar']|h:object[@usemap]|h:select|h:textarea|h:video[@controls]">
             <report test="ancestor::$ancestor">The <name/> element must not appear inside <value-of
                     select="local-name(ancestor::$ancestor)"/> elements.</report>
         </rule>
