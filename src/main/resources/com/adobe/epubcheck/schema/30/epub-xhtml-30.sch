@@ -332,21 +332,6 @@
         </rule>
     </pattern>
 
-    <pattern id="article-pubdate">
-        <rule context="h:article[h:time]">
-            <assert test="count(./h:time[@pubdate]) &lt; 2">For each article element, there must be
-                no more than one time element child with a pubdate attribute</assert>
-        </rule>
-    </pattern>
-
-    <pattern id="document-pubdate">
-        <rule context="h:time[not (ancestor::h:article)]">
-            <assert test="count(//h:time[@pubdate and not (ancestor::h:article)]) &lt; 2">For each
-                Document, there must be no more than one time element with a pubdate attribute that
-                does not have an ancestor article element.</assert>
-        </rule>
-    </pattern>
-
     <pattern id="md-a-area">
         <rule context="h:a[@itemprop] | h:area[@itemprop]">
             <assert test="@href">If the itemprop is specified on an a element, then the href

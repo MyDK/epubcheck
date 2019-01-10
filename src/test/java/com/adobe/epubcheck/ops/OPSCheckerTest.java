@@ -946,5 +946,13 @@ public class OPSCheckerTest
     testValidateDocument("xhtml/valid/issue777-empty-lang.xhtml", "application/xhtml+xml",
         EPUBVersion.VERSION_3);
   }
+  
+  @Test
+  public void testObsoletePubdateAttribute()
+  {
+    Collections.addAll(expectedErrors, MessageId.RSC_005);
+    testValidateDocument("xhtml/invalid/obsolete-pubdate.xhtml", "application/xhtml+xml",
+        EPUBVersion.VERSION_3);
+  }
 
 }
