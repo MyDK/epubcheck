@@ -7,6 +7,8 @@ include "svg11/inkscape.rnc"
 
 common.elem.phrasing |= svg
 
+SVG.id.attrib = attribute id { datatype.ID }?
+
 SVG.Core.extra.attrib &= epub.type.attr?
 
 SVG.foreignObject.content |=
